@@ -1,0 +1,286 @@
+/* --- PRINCIPAL --- */
+.principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-2);
+  margin: var(--sp-1);
+}
+
+/* --- PRINCIAPL HEADER --- */
+.principal__header {
+  height: var(--header-height);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin: var(--sp-0-5);
+  padding: var(--sp-0-5);
+  margin: var(--sp-1);
+}
+.principal__header--title {
+  font-family: var(--title-font);
+  font-size: var(--large-font);
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+.principal__header--btn {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: var(--sp-1);
+}
+.principal__header--btn button{
+  width: 45%;
+  min-width: 120px;
+  height: 60%;
+  background-color: #555A88;
+  border: none;
+  color: var(--form-color);
+  cursor: pointer;
+}
+.principal__header--btn button:hover {
+  background-color: #555a88a5;
+}
+
+/* --- FORM --- */
+
+.principal__form{
+  position: fixed;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: var(--z-fixed);
+}
+.form {
+  background-color: #24303C;
+  width: 400px;
+  height: 80%;
+
+  display: grid;
+  padding: var(--sp-1);
+  color: var(--form-color);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+.form__header {
+  display: flex;
+  gap: 13.5rem;
+}
+.btn--close--modal{
+  height: 50%;
+  font-size: var(--medium-font);
+  background-color: transparent;
+  border: none;
+  color: var(--form-color);
+  display: flex;
+  cursor: pointer;
+}
+.form__hr {
+  width: 97%;
+  height: 4%;
+}
+.form__email,
+.form__password,
+.form__first-name,
+.form__last-name,
+.form__birthday {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  width: 95%;
+  height: 100%;
+  padding: 0.3em
+}
+.form__email label,
+.form__password label,
+.form__first-name label,
+.form__last-name label,
+.form__birthday label{
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.form__email input,
+.form__password input,
+.form__first-name input,
+.form__last-name input,
+.form__birthday input{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 0.2em;
+  border: 1px solid #1F52C5;
+  background-color: transparent;
+  color: var(--form-color);
+}
+.form__birthday input{
+  cursor: pointer;
+}
+.form__btn {
+  background-color: #1F52C5;
+  color: var(--form-color);
+  border: none;
+  cursor: pointer;
+  margin: 0.5em;
+}
+.form__btn:hover {
+  background-color: #1f51c57e;
+}
+.card__item--btn__calendar {
+  color: var(--form-color);
+}
+.form__show {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: var(--z-fixed);
+}
+
+/* --- CARD --- */
+.principal__card {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  padding: var(--sp-2);
+  margin: var(--sp-1);
+}
+.card {
+  border: 1.5px solid gray;
+  width: 20em;
+  min-height: 16em;
+  border-radius: 0.3em;
+  padding: var(--sp-1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.card hr {
+  color: gray;
+}
+.card__title {
+  text-align: center;
+  font-size: var(--medium-font);
+}
+.card__list {
+  list-style: none;
+}
+.card__item {
+  display: flex;
+  flex-direction: column;
+}
+.card__item-text {
+  color: rgb(185, 178, 178);
+}
+.card__btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1em;
+  gap: 1em;
+}
+.card__btns button {
+  width: 2em;
+  height: 2.1em;
+  font-size: var(--normal-font);
+  color: var(--form-color);
+  cursor: pointer;
+  border-radius: 0.2em;
+  border: none;
+}
+.card__btns-delete {
+  background-color: var(--primary-color);
+}
+.card__btns-delete:hover {
+  background-color: hsla(354, 78%, 60%, 0.586);
+}
+.card__btns-edit {
+  background-color: rgb(175, 175, 175);
+}
+.card__btns-edit:hover {
+  background-color: rgba(175, 175, 175, 0.622);
+}
+
+/* --- ERROR --- */
+.principal__error {
+  position: fixed;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.493);
+  z-index: var(--z-fixed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  background-color: var(--form-color);
+  width: 30%;
+  min-width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  /* justify-content: center; */
+  padding: 0;
+}
+.error__close {
+  cursor: pointer;
+}
+.error__header {
+  display: flex;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+  justify-content: end;
+  align-items: end;
+  padding-top: 0.3em;
+  padding-right: 0.5em;
+}
+.error__header button {
+  font-size: var(--medium-font);
+  border: none;
+  background-color: white;
+  font-weight: var(--font-bold);
+}
+.error__title {
+  font-size: var(--medium-font);
+}
+.error__btn {
+  width: 70%;
+  height: 2.3em;
+  border: none;
+  background-color: #434875;
+  cursor: pointer;
+}
+.show__error {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.493);
+  z-index: var(--z-fixed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

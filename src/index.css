@@ -1,0 +1,66 @@
+/* --- ROOT --- */
+:root {
+  /* -header- */
+  --header-height: 5rem;
+  
+  /* -colors- */
+  --primary-color: hsl(354, 78%, 60%);;
+  --body-color: hsl(206, 4%, 97%);
+  --text-color: hsl(0, 0%, 20%);
+  --title-color: hsl(0, 0%, 10%);
+  --form-color: white;
+
+  /* -Fonts and Typography- */
+  --body-font: 'Open Sans', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --large-font: 3rem;
+  --big-font: 2rem;
+  --medium-font: 1.5rem;
+  --normal-font: 1rem;
+  --small-font: 0.8rem;
+  --tiny-font: 0.75rem;
+
+  /* -Font Weight */
+  --font-tiny: 300;
+  --font-normal: 400;
+  --font-medium: 600;
+  --font-bold: 700;
+
+  /* -Margin and Paddings */
+  --sp-0-5: 0.5rem;
+  --sp-0-75: 0.75rem;
+  --sp-1: 1rem;
+  --sp-1-5: 1.5rem;
+  --sp-2: 2rem;
+  --sp-2-5: 2.5rem;
+  --sp-3: 3rem;
+  --sp-5: 5rem;
+
+  /* -z index */
+  --z-fixed: 1;
+  --z-modal: 2;
+}
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html,
+body{
+height: 100%;
+}
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-size: 16px;
+}
+body{
+  font-family: var(--body-font);
+  font-size: var(--normal-font);
+  font-weight: var(--font-normal);
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
