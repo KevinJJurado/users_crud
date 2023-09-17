@@ -31,7 +31,7 @@ function App() {
       <div className='principal__header'> 
         <h1 className='principal__header--title'>Users</h1>
         <div className='principal__header--btn'>  
-        <button className='principal__btn-create' onClick={handleCreateNew}><i className='bx bx-add-to-queue'></i> Create a new Element</button>
+          <button className='principal__btn-create' onClick={handleCreateNew}><i className='bx bx-add-to-queue'></i> Create a new Element</button>
         </div>
       </div>
       <div className={`${showForm ? 'form__show': 'principal__form'}`}>
@@ -53,6 +53,7 @@ function App() {
               setInfoUpdate = {setInfoUpdate}
               setGetUserDelete = {setGetUserDelete}
               setCloseModalDelete = {setCloseModalDelete}
+              setShowForm = {setShowForm}
             />
           ))
         }

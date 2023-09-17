@@ -1,6 +1,6 @@
 
 
-const UserCard = ({ user, deleteUser, setInfoUpdate, setGetUserDelete, setCloseModalDelete }) => {
+const UserCard = ({ user, deleteUser, setInfoUpdate, setGetUserDelete, setCloseModalDelete, setShowForm }) => {
 
   const handleDelete = () => {
     deleteUser('/users', user.id)
@@ -10,6 +10,7 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setGetUserDelete, setCloseM
 
   const handleEdit = () => {
     setInfoUpdate(user)
+    setShowForm(true)
   }
 
   return (

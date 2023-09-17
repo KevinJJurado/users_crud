@@ -19,6 +19,7 @@ const FormUser = ({ createUser, infoUpdate, updateUser, setInfoUpdate, setShowFo
     } else {
       // Create
       createUser('/users', data)
+      
     }
     reset({
       email: '',
@@ -30,6 +31,14 @@ const FormUser = ({ createUser, infoUpdate, updateUser, setInfoUpdate, setShowFo
   }
   const handleDelete = () => {
     setShowForm(false)
+    setInfoUpdate()
+    reset({
+      email: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      birthday: ''
+    })
   }
 
   return (
