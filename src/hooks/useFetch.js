@@ -16,7 +16,7 @@ const useFetch = (baseUrl) => {
     const url = `${baseUrl}${path}/`
     axios.post(url, data)
     .then(res => {
-      console.log(res)
+      // console.log(res.data)
       setInfoApi([...infoApi, res.data])
     })
     .catch(err => console.log(err))
@@ -26,7 +26,7 @@ const useFetch = (baseUrl) => {
     const url = `${baseUrl}${path}/${id}`
     axios.delete(url)
     .then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       setInfoApi(infoApi.filter(e => id !== e.id))
     })
   }
@@ -35,7 +35,7 @@ const useFetch = (baseUrl) => {
     const url =`${baseUrl}${path}/${id}/`
     axios.patch(url, data)
     .then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       setInfoApi(infoApi.map(e => (id === e.id) ? res.data : e))
     })
     .catch(err => console.log(err))

@@ -9,7 +9,7 @@ import Error from './components/Error'
 function App() {
 
   const [infoUpdate, setInfoUpdate] = useState()
-  const baseUrl = 'https://users-crud.academlo.tech'
+  const baseUrl = 'https://users-crud-backend-dev-dexj.3.us-1.fl0.io'//'https://users-crud.academlo.tech'
   const [users, getUsers, createUser, deleteUser, updateUser] = useFetch(baseUrl)
 
   const [showForm, setShowForm] = useState(false)
